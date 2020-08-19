@@ -4,3 +4,4 @@ I hope that this project will be useful for you to have a good understanding of 
 
 ## Lectures List
 BT01 INTRO ,Notes and assets 
+BT02 Game Design Document
