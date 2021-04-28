@@ -4,6 +4,9 @@
 #include "TankPlayerController2.h"
 
 
+//tick 
+	//super
+
 void ATankPlayerController2::BeginPlay() {
 	Super::BeginPlay();
 	auto ControlledTank = GetControlledTank();
@@ -16,7 +19,22 @@ void ATankPlayerController2::BeginPlay() {
 
 }
 
+void ATankPlayerController2::Tick(float DeltaTime) {
+	Super::Tick(DeltaTime);
+	AimTowardsCrosshair();
+}
+
+
 ATank* ATankPlayerController2::GetControlledTank() const {
 
 	return Cast<ATank>(GetPawn());
+}
+
+void ATankPlayerController2::AimTowardsCrosshair() {
+	if (!GetControlledTank()) {
+		return;		
+	}
+	//Get World location if linetrace through crosshair
+	//if it hits the landscame
+		//Tell controlled tank to aim at this point
 }
